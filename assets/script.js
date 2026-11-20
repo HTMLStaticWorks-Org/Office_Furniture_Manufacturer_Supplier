@@ -11,7 +11,7 @@
   try {
     savedTheme = localStorage.getItem('ll-theme') || 'light';
     savedDir = localStorage.getItem('ll-dir') || 'ltr';
-  } catch (e) {}
+  } catch (e) { }
 
   if (savedTheme === 'dark') body.classList.add('dark');
   body.dir = savedDir;
@@ -21,7 +21,7 @@
       body.classList.toggle('dark');
       try {
         localStorage.setItem('ll-theme', body.classList.contains('dark') ? 'dark' : 'light');
-      } catch (e) {}
+      } catch (e) { }
     });
   }
 
@@ -38,7 +38,7 @@
       body.dir = body.dir === 'rtl' ? 'ltr' : 'rtl';
       try {
         localStorage.setItem('ll-dir', body.dir);
-      } catch (e) {}
+      } catch (e) { }
       updateRtlLabel();
     });
   }
@@ -51,7 +51,7 @@
       menu.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
     });
 
-    nav.querySelectorAll('a,button').forEach(el =>
+    nav.querySelectorAll('a').forEach(el =>
       el.addEventListener('click', () => {
         if (window.matchMedia('(max-width: 1050px)').matches) {
           nav.classList.remove('open');
@@ -154,7 +154,7 @@
               storedCart.map(x => `- ${x.name} (Qty sets: ${x.qty})`).join('\n');
           }
         }
-      } catch (e) {}
+      } catch (e) { }
     }
 
     quoteForm.addEventListener('submit', e => {
@@ -176,12 +176,12 @@
 
   try {
     cart = JSON.parse(localStorage.getItem('ll-cart') || '[]');
-  } catch (e) {}
+  } catch (e) { }
 
   const save = () => {
     try {
       localStorage.setItem('ll-cart', JSON.stringify(cart));
-    } catch (e) {}
+    } catch (e) { }
     render();
   };
 

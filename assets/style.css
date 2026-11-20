@@ -3155,5 +3155,958 @@ body.dark .floorplan-ribbon {
   }
 }
 
+/* ==========================================================================
+   V24: UNIFIED HERO HEADING & CONTENT FONT SIZES (HOME 1 & HOME 2)
+   Keep Home 1 and Home 2 hero heading and paragraph font sizes identical
+   to the other hero section texts (.page-hero) across all viewports.
+   ========================================================================== */
+.hero.hero-home-one .hero-title-one,
+.hero.hero-home-two .hero-title-two,
+.hero-luxe .display {
+  font-size: clamp(38px, 4.2vw, 58px) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.hero.hero-home-one .hero-description,
+.hero.hero-home-two .hero-description,
+.hero-luxe .hero-description {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+/* ==========================================================================
+   V25: HIGH-CONTRAST FEATURE BULLET ICONS IN MANUFACTURING PROCESS SECTION
+   Ensure circular badge and icon stand out clearly against var(--surface2)
+   ========================================================================== */
+.feature-icon {
+  width: 48px !important;
+  height: 48px !important;
+  flex: none !important;
+  border-radius: 50% !important;
+  background: var(--surface) !important;
+  border: 1.5px solid var(--accent) !important;
+  box-shadow: 0 4px 12px rgba(27, 94, 87, 0.12) !important;
+  display: grid !important;
+  place-items: center !important;
+  color: var(--accent) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.feature-icon svg {
+  width: 21px !important;
+  height: 21px !important;
+  stroke: currentColor !important;
+  fill: none !important;
+  stroke-width: 2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  display: block !important;
+}
+
+/* ==========================================================================
+   V26: HOME 1 CLIENT REVIEWS SECTION
+   ========================================================================== */
+.reviews-grid {
+  align-items: stretch !important;
+}
+
+.review-card {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius, 22px) !important;
+  padding: 30px 28px !important;
+  box-shadow: var(--shadow) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+}
+
+.review-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 22px 50px rgba(18, 38, 36, 0.13) !important;
+}
+
+.review-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin-bottom: 18px !important;
+}
+
+.review-stars {
+  color: var(--accent) !important;
+  font-size: 16px !important;
+  letter-spacing: 0.14em !important;
+  line-height: 1 !important;
+}
+
+.review-badge {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  background: var(--surface2) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--accent) !important;
+  white-space: nowrap !important;
+}
+
+.review-text {
+  font-size: 15px !important;
+  line-height: 1.75 !important;
+  color: var(--text) !important;
+  margin: 0 0 24px !important;
+  flex: 1 1 auto !important;
+}
+
+.review-author {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding-top: 18px !important;
+  border-top: 1px solid var(--line) !important;
+}
+
+.review-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  display: grid !important;
+  place-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+body.dark .review-avatar {
+  color: #111817 !important;
+}
+
+.review-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+
+.review-meta strong {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: var(--text) !important;
+  line-height: 1.3 !important;
+}
+
+.review-meta span {
+  font-size: 12px !important;
+  color: var(--muted) !important;
+  line-height: 1.4 !important;
+}
+
+/* ==========================================================================
+   V27: HEADER & FOOTER BRAND LOGO ALIGNMENT PARITY + DISTINCT HOME 2 HERO
+   ========================================================================== */
+
+/* 1. Keep Header and Footer Brand Logo & Name Alignment Identical */
+.header .brand,
+.footer .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.35 !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+
+.header .brand > span:not(.brandmark),
+.footer .brand > span:not(.brandmark) {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  line-height: 1.25 !important;
+}
+
+.header .brand small,
+.footer .brand small {
+  display: block !important;
+  font-size: 9px !important;
+  letter-spacing: 0.18em !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  color: var(--muted) !important;
+}
+
+@media (max-width: 1240px) and (min-width: 1051px) {
+  .navwrap {
+    gap: 12px !important;
+  }
+  .navlinks > a {
+    padding: 6px 8px !important;
+    font-size: 11.5px !important;
+  }
+  .nav-menu-tools .nav-contact {
+    width: 132px !important;
+    min-width: 132px !important;
+    max-width: 132px !important;
+    flex: 0 0 132px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .header .brand,
+  .footer .brand {
+    font-size: 13px !important;
+  }
+  .header .brand .brandmark,
+  .footer .brand .brandmark {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+  }
+  .header .brand .brandmark svg,
+  .footer .brand .brandmark svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .header .brand small,
+  .footer .brand small {
+    font-size: 8px !important;
+    letter-spacing: 0.12em !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .brand,
+  .footer .brand {
+    gap: 8px !important;
+    font-size: 11px !important;
+  }
+  .header .brand .brandmark,
+  .footer .brand .brandmark {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    max-width: 34px !important;
+    border-radius: 8px !important;
+  }
+  .header .brand .brandmark svg,
+  .footer .brand .brandmark svg {
+    width: 23px !important;
+    height: 23px !important;
+  }
+  .header .brand small,
+  .footer .brand small {
+    font-size: 7.5px !important;
+    letter-spacing: 0.08em !important;
+  }
+}
+
+/* 2. Distinct Centered Editorial + Panoramic Showcase Hero for Home 2 */
+.hero.hero-home-two {
+  min-height: auto !important;
+  padding: clamp(36px, 4.5vw, 56px) 0 30px !important;
+}
+
+.hero.hero-home-two .hero-two-layout.hero-two-centered {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: clamp(28px, 3.5vw, 42px) !important;
+  padding: clamp(28px, 3.5vw, 44px) 0 clamp(24px, 3vw, 36px) !important;
+}
+
+.hero.hero-home-two .hero-two-title {
+  max-width: 780px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.hero.hero-home-two .hero-two-title .hero-kicker {
+  text-align: center !important;
+  margin: 0 0 10px !important;
+}
+
+.hero.hero-home-two .hero-two-title .hero-title-two {
+  max-width: 780px !important;
+  text-align: center !important;
+  margin: 0 0 18px !important;
+}
+
+.hero.hero-home-two .hero-two-title .hero-description {
+  max-width: 640px !important;
+  text-align: center !important;
+  margin: 0 auto 24px !important;
+}
+
+.hero.hero-home-two .hero-two-title .hero-actions {
+  justify-content: center !important;
+}
+
+.hero-two-showcase {
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: 1.55fr 1fr !important;
+  gap: 20px !important;
+  align-items: stretch !important;
+}
+
+.hero-two-panoramic {
+  position: relative !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  min-height: 310px !important;
+  max-height: 360px !important;
+  box-shadow: 0 22px 55px rgba(18, 38, 36, 0.16) !important;
+  border: 1px solid var(--line) !important;
+}
+
+.hero-two-panoramic img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.hero-two-panoramic:hover img {
+  transform: scale(1.04) !important;
+}
+
+.hero-two-tag {
+  position: absolute !important;
+  left: 18px !important;
+  bottom: 18px !important;
+  background: rgba(16, 30, 28, 0.84) !important;
+  color: #ffffff !important;
+  padding: 8px 14px !important;
+  border-radius: 999px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+body[dir="rtl"] .hero-two-tag {
+  left: auto !important;
+  right: 18px !important;
+}
+
+.hero-two-sidecard {
+  display: flex !important;
+  flex-direction: column !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  box-shadow: 0 22px 55px rgba(18, 38, 36, 0.14) !important;
+}
+
+.hero-two-sideimg {
+  flex: 1 1 auto !important;
+  min-height: 200px !important;
+  max-height: 250px !important;
+  overflow: hidden !important;
+}
+
+.hero-two-sideimg img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.hero-two-sidecard:hover .hero-two-sideimg img {
+  transform: scale(1.05) !important;
+}
+
+.hero-two-specbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  padding: 16px 20px !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.hero-two-specbar b {
+  display: block !important;
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  font-weight: 800 !important;
+}
+
+.hero-two-specbar span {
+  display: block !important;
+  font-size: 12px !important;
+  opacity: 0.9 !important;
+  margin-top: 2px !important;
+}
+
+.hero-two-specbar a {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  display: grid !important;
+  place-items: center !important;
+  font-size: 17px !important;
+  flex-shrink: 0 !important;
+  transition: background-color 0.25s ease, transform 0.25s ease !important;
+}
+
+.hero-two-specbar a:hover {
+  background: #ffffff !important;
+  color: var(--accent) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.dark .hero-two-specbar {
+  color: #111817 !important;
+}
+
+body.dark .hero-two-specbar a {
+  background: rgba(17, 24, 23, 0.16) !important;
+  color: #111817 !important;
+}
+
+body.dark .hero-two-specbar a:hover {
+  background: #111817 !important;
+  color: var(--accent) !important;
+}
+
+@media (max-width: 900px) {
+  .hero-two-showcase {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-two-panoramic {
+    min-height: 250px !important;
+    max-height: 300px !important;
+  }
+  .hero-two-sideimg {
+    min-height: 200px !important;
+    max-height: 230px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.hero-home-two .hero-two-title .hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .hero.hero-home-two .hero-two-title .hero-actions .btn {
+    width: min(100%, 320px) !important;
+  }
+  .hero-two-panoramic {
+    min-height: 210px !important;
+  }
+}
+
+/* ==========================================================================
+   V28: HOME 2 CRAFT GALLERY CARD & TEXT BASELINE ALIGNMENT
+   ========================================================================== */
+.craft-story-section .craft-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 22px !important;
+}
+
+.craft-story-section .craft-gallery-card {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.craft-story-section .craft-gallery-image {
+  width: 100% !important;
+  height: 230px !important;
+  min-height: 230px !important;
+  max-height: 230px !important;
+  flex: 0 0 230px !important;
+}
+
+.craft-story-section .craft-gallery-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  padding: 22px 22px 24px !important;
+  box-sizing: border-box !important;
+}
+
+.craft-story-section .craft-gallery-caption > span {
+  display: block !important;
+  line-height: 1.4 !important;
+  margin: 0 0 8px !important;
+  flex: 0 0 auto !important;
+}
+
+.craft-story-section .craft-gallery-caption h3 {
+  font-size: clamp(19px, 1.55vw, 22px) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 10px !important;
+  min-height: 2.5em !important;
+  flex: 0 0 auto !important;
+}
+
+.craft-story-section .craft-gallery-caption p {
+  font-size: 13.5px !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+@media (max-width: 900px) {
+  .craft-story-section .craft-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .craft-story-section .craft-gallery-card:first-child {
+    grid-column: 1 / -1 !important;
+  }
+  .craft-story-section .craft-gallery-caption h3 {
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .craft-story-section .craft-gallery {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .craft-story-section .craft-gallery-card:first-child {
+    grid-column: auto !important;
+  }
+}
+
+/* ==========================================================================
+   V29: HOME 2 VALUE MOTION CARDS WITH IMAGES ("Great workspaces are a team effort.")
+   ========================================================================== */
+.value-motion-section .value-motion-card {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  border-radius: 16px !important;
+  min-height: 0 !important;
+  height: 100% !important;
+}
+
+.value-motion-section .value-motion-card::before {
+  display: none !important;
+}
+
+.value-motion-section .vm-media {
+  position: relative !important;
+  width: 100% !important;
+  height: 205px !important;
+  flex: 0 0 205px !important;
+  overflow: hidden !important;
+  background: var(--surface) !important;
+}
+
+.value-motion-section .vm-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.value-motion-section .value-motion-card:hover .vm-media img {
+  transform: scale(1.06) !important;
+}
+
+.value-motion-section .vm-media .vm-number {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  background: rgba(16, 30, 28, 0.84) !important;
+  color: #ffffff !important;
+  font: italic 600 16px/1 Georgia, serif !important;
+  display: grid !important;
+  place-items: center !important;
+  opacity: 1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+body[dir="rtl"] .value-motion-section .vm-media .vm-number {
+  right: auto !important;
+  left: 14px !important;
+}
+
+.value-motion-section .vm-body {
+  padding: 24px 26px 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+.value-motion-section .vm-body .tag {
+  margin-bottom: 8px !important;
+}
+
+.value-motion-section .vm-body .h3 {
+  margin: 0 0 10px !important;
+}
+
+.value-motion-section .vm-body p {
+  margin: 0 !important;
+}
+
+/* ==========================================================================
+   V30: OUR STORY & SOLUTIONS JOURNEY MOTION BAR VISIBILITY & HIGHLIGHTS
+   ========================================================================== */
+.journey-motion {
+  padding: clamp(46px, 5vw, 68px) 0 !important;
+  background: var(--surface2) !important;
+  border-block: 1px solid var(--line) !important;
+}
+
+.journey-motion-inner > .eyebrow {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  letter-spacing: 0.2em !important;
+  font-weight: 800 !important;
+  margin-bottom: 28px !important;
+  color: var(--accent) !important;
+}
+
+.journey-steps {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  white-space: nowrap !important;
+}
+
+.journey-steps span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 13px 18px !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 18px rgba(18, 38, 36, 0.06) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.1em !important;
+  color: var(--accent) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.journey-steps span:hover {
+  transform: translateY(-3px) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 12px 26px rgba(27, 94, 87, 0.14) !important;
+}
+
+.journey-steps b {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: var(--text) !important;
+  margin-left: 0 !important;
+}
+
+.journey-steps i {
+  font-style: normal !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--accent) !important;
+}
+
+.journey-progress {
+  height: 3px !important;
+  border-radius: 99px !important;
+  background: var(--line) !important;
+  margin-top: 28px !important;
+}
+
+@media (max-width: 680px) {
+  .journey-steps {
+    animation: none !important;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+  .journey-steps span {
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+  }
+  .journey-steps b {
+    font-size: 12.5px !important;
+  }
+  .journey-steps i {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   V31: PROCESS / TIMELINE STEP CARD TEXT BASELINE ALIGNMENT
+   Aligns numbers, headings, and paragraph text across 4-column .process rows
+   ========================================================================== */
+.process {
+  align-items: stretch !important;
+}
+
+.process .step {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.process .step b {
+  display: block !important;
+  line-height: 1.15 !important;
+  margin-bottom: 8px !important;
+}
+
+.process .step .h3,
+.process .step h3 {
+  font-size: clamp(20px, 1.7vw, 24px) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 10px !important;
+  min-height: 2.5em !important;
+}
+
+.process .step p {
+  margin: 0 !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 520px) {
+  .process .step .h3,
+  .process .step h3 {
+    min-height: auto !important;
+  }
+}
+
+/* ==========================================================================
+   V32: OUR STORY GUIDING VALUES CARDS WITH IMAGES
+   ========================================================================== */
+.about-values-section .about-value-card {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.about-values-section .about-value-media {
+  width: 100% !important;
+  height: 195px !important;
+  flex: 0 0 195px !important;
+  overflow: hidden !important;
+  background: var(--surface2) !important;
+}
+
+.about-values-section .about-value-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.about-values-section .about-value-card:hover .about-value-media img {
+  transform: scale(1.06) !important;
+}
+
+.about-values-section .about-value-body {
+  padding: clamp(24px, 2.8vw, 32px) clamp(22px, 2.5vw, 30px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+}
+
+/* ==========================================================================
+   V33: SPLIT SECTION BUTTON SPACING AFTER FEATURE ITEMS (SOLUTIONS PAGE)
+   ========================================================================== */
+.split .feature + .btn,
+.split .feature + .link-arrow {
+  margin-top: 28px !important;
+}
+
+/* ==========================================================================
+   V34: QUOTE CART COUNT CONTRAST ON HOVER IN LIGHT MODE (FURNITURE PAGE)
+   ========================================================================== */
+.btn.cart-open:hover .cart-count {
+  background: #ffffff !important;
+  color: #142423 !important;
+}
+
+/* ==========================================================================
+   V35: PROCESS STEP ICON BADGE (REPLACING 01-04 NUMBERS ACROSS ALL PAGES)
+   ========================================================================== */
+.process .step .step-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  background: var(--surface2) !important;
+  border: 1.5px solid var(--accent) !important;
+  color: var(--accent) !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  margin-bottom: 16px !important;
+  flex: 0 0 auto !important;
+}
+
+.process .step .step-icon svg {
+  width: 22px !important;
+  height: 22px !important;
+  stroke: currentColor !important;
+  fill: none !important;
+  stroke-width: 1.9 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  display: block !important;
+}
+
+/* ==========================================================================
+   V36: STRETCH .photo.tall IN .split TO MATCH ADJACENT CONTENT HEIGHT
+   ========================================================================== */
+@media (min-width: 781px) {
+  .split:has(.photo.tall) {
+    align-items: stretch !important;
+  }
+  .split .photo.tall {
+    height: 100% !important;
+    min-height: 540px !important;
+  }
+  .split .photo.tall img {
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* ==========================================================================
+   V37: CONTACT PAGE SOCIAL ICONS
+   ========================================================================== */
+.contact-social {
+  margin-top: 12px !important;
+}
+
+.contact-social a {
+  border-color: var(--line) !important;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.contact-social a:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+body.dark .contact-social a:hover {
+  color: #111817 !important;
+}
+
+.contact-social a[title="YouTube"]:hover,
+body.dark .contact-social a[title="YouTube"]:hover {
+  background: #cc181e !important;
+  border-color: #cc181e !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   V38: HOME 1 HERO 1024px VIEWPORT BUTTONS & CARD SEQUENCE FIT
+   ========================================================================== */
+.hero.hero-home-one .hero-btn-secondary {
+  border-width: 2px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 1180px) and (min-width: 901px) {
+  .hero.hero-home-one .hero-luxe-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) !important;
+    gap: 28px !important;
+    width: min(1200px, calc(100% - 48px)) !important;
+  }
+
+  .hero.hero-home-one .hero-actions {
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .hero.hero-home-one .hero-btn-primary,
+  .hero.hero-home-one .hero-btn-secondary {
+    min-height: 46px !important;
+    padding: 0 20px !important;
+    font-size: 12.5px !important;
+    white-space: nowrap !important;
+  }
+
+  .hero.hero-home-one .hero-sequence-wrap {
+    justify-content: center !important;
+  }
+
+  .hero.hero-home-one .hero-sequence-card.seq-card-1 {
+    width: 185px !important;
+    height: 275px !important;
+  }
+
+  .hero.hero-home-one .hero-sequence-card.seq-card-2 {
+    width: 174px !important;
+    height: 258px !important;
+    margin-left: -44px !important;
+  }
+
+  .hero.hero-home-one .hero-sequence-card.seq-card-3 {
+    width: 164px !important;
+    height: 242px !important;
+    margin-left: -44px !important;
+  }
+
+  body[dir="rtl"] .hero.hero-home-one .hero-sequence-card.seq-card-2,
+  body[dir="rtl"] .hero.hero-home-one .hero-sequence-card.seq-card-3 {
+    margin-left: 0 !important;
+    margin-right: -44px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
